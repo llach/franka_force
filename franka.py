@@ -43,8 +43,7 @@ for i in range(steps):
         elif name2[-2:] == "_r":
             forces_r[pidx, i] = f
         else: print(f"unknown pad {name2}")
-
-
+    
     mj.mj_step(model, data)
     if with_vis: viewer.render()
 

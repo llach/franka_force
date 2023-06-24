@@ -14,3 +14,7 @@ The original MJCF was adapted slightly:
 Run `franka.py`. 
 If `with_vis=False`, the grasp is executed and the resulting force trajectory is plotted.
 Set it to `True` to see the grasp.
+
+## Oscillating Forces
+
+On the [`oscillations` branch ](https://github.com/llach/franka_force/tree/oscillations) of this repo lies a version of the gripper producing unstable contact force readings during the grasp. 
