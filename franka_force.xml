@@ -58,7 +58,7 @@
   <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
   <geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
 
-  <body name="object" pos="0 0 0.05">
+  <body name="object" pos="0.05 0 0.05">
     <freejoint name="object_joint" />
     <inertial mass="0.1" pos="0 0 0" diaginertia="0.0001 0.00025 0.00017"/>
     <geom name="object" type="cylinder" size="0.02 0.05" priority="1" solimp="0 0.95 0.01 0.2 2" />  
@@ -77,26 +77,26 @@
       <joint name="finger_joint_l" class="finger"/>
       <geom mesh="finger_0" material="off_white" class="visual"/>
       <geom mesh="finger_1" material="black" class="visual"/>
-      <geom mesh="finger_0" class="collision"/> 
+      
+      <!-- contact forces go wild when using this geom -->
+      <geom type="box" size="0.013 0.002 0.05" pos="0 0 .05" rgba="0 1 0 .2" name="pad_0_r" />
 
-      <geom class="fingertip_pad_collision_1" name="pad_1_l"/>
-      <geom class="fingertip_pad_collision_2" name="pad_2_l"/>
-      <geom class="fingertip_pad_collision_3" name="pad_3_l"/>
-      <geom class="fingertip_pad_collision_4" name="pad_4_l"/>
-      <geom class="fingertip_pad_collision_5" name="pad_5_l"/>
+      <!-- use these geoms for noise-free contact force measurements -->
+      <!-- <geom type="box" size="0.013 0.002 0.05" pos="0 0 .05" rgba="0 1 0 .2" class="visual" />
+      <geom type="box" size="0.013 0.002 0.013" pos="0 0 0.0875" rgba="1 1 0 .5" name="pad_0_r" /> -->
     </body>
     <body name="right_finger" pos="0 0 0.0584" quat="0 0 0 1">
       <inertial mass="0.015" pos="0 0 0" diaginertia="2.375e-6 2.375e-6 7.5e-7"/>
       <joint name="finger_joint_r" class="finger"/>
       <geom mesh="finger_0" material="off_white" class="visual"/>
       <geom mesh="finger_1" material="black" class="visual"/>
-      <geom mesh="finger_0" class="collision"/>
+      
+      <!-- contact forces go wild when using this geom -->
+      <geom type="box" size="0.013 0.002 0.05" pos="0 0 .05" rgba="0 1 0 .2" name="pad_0_l" />
 
-      <geom class="fingertip_pad_collision_1" name="pad_1_r"/>
-      <geom class="fingertip_pad_collision_2" name="pad_2_r"/>
-      <geom class="fingertip_pad_collision_3" name="pad_3_r"/>
-      <geom class="fingertip_pad_collision_4" name="pad_4_r"/>
-      <geom class="fingertip_pad_collision_5" name="pad_5_r"/>
+      <!-- use these geoms for noise-free contact force measurements -->
+      <!-- <geom type="box" size="0.013 0.002 0.05" pos="0 0 .05" rgba="0 1 0 .2" class="visual" />
+      <geom type="box" size="0.013 0.002 0.013" pos="0 0 0.0875" rgba="1 1 0 .5" name="pad_0_l" /> -->
     </body>
   </body>
   </worldbody>

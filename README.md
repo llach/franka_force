@@ -1,5 +1,11 @@
 # Contact Forces in MuJoCo - Franka Panda
 
+**!!! WARNING !!!** This branch doesn't work correctly (contact forces are noisy / oscillate heavily), so **do not use it.** 
+It was created to showcase the problem raised in MuJoCo issue X.
+The main branch provides a solution and is working fine.
+
+---
+
 Example of how to read contact forces during a grasp with the [Franka Panda hand model](https://github.com/deepmind/mujoco_menagerie/blob/main/franka_emika_panda/hand.xml) from the [MuJoCo Menagerie](https://github.com/deepmind/mujoco_menagerie). 
 The original MJCF was adapted slightly:
 

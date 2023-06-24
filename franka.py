@@ -3,7 +3,7 @@ import mujoco as mj
 import mujoco_viewer
 
 
-with_vis = 1
+with_vis = 0
 model = mj.MjModel.from_xml_path("franka_force.xml")
 data = mj.MjData(model)
 
@@ -44,7 +44,6 @@ for i in range(steps):
             forces_r[pidx, i] = f
         else: print(f"unknown pad {name2}")
 
-
     mj.mj_step(model, data)
     if with_vis: viewer.render()
 
@@ -58,4 +57,6 @@ plt.title("Grasping Force")
 plt.xlabel("t")
 plt.ylabel("f(t)")
 plt.legend()
+
+plt.tight_layout()
 plt.show()
