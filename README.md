@@ -1,8 +1,11 @@
 # Contact Forces in MuJoCo - Franka Panda
 
 **!!! WARNING !!!** This branch doesn't work correctly (contact forces are noisy / oscillate heavily), so **do not use it.** 
-It was created to showcase the problem raised in MuJoCo issue X.
+It was created to showcase the problem raised in [MuJoCo issue 941](https://github.com/deepmind/mujoco/issues/941).
 The main branch provides a solution and is working fine.
+
+Alternatively, a different set of collision geoms can be used and force measurements will be noise-free too.
+To do so, comment in [this](https://github.com/llach/franka_force/blob/oscillations/franka_force.xml#L85) and [this](https://github.com/llach/franka_force/blob/oscillations/franka_force.xml#L98) and comment out the other geoms [here](https://github.com/llach/franka_force/blob/oscillations/franka_force.xml#L82) and [here](https://github.com/llach/franka_force/blob/oscillations/franka_force.xml#L95).
 
 ---
 
