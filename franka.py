@@ -57,4 +57,6 @@ plt.title("Grasping Force")
 plt.xlabel("t")
 plt.ylabel("f(t)")
 plt.legend()
+
+plt.tight_layout()
 plt.show()
